@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleses.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <h1 style="font-size: xx-large;">
+          <img src="https://st2.depositphotos.com/4483779/6691/v/450/depositphotos_66916419-stock-illustration-auto-on-the-road-logo.jpg" alt="Driving School Logo">
+          RK Driving School
+        </h1>
+      </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner">
+        <div class="banner-text">
+            Contact
+        </div>
+       </section>
+    <br>
+    <section id="contact" class="section contact">
+        <div class="contact-container">
+         <div class="map">
+             <h2 style="font-size: xx-large;color:rgb(10, 64, 77)">Location</h2>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7941666.337948692!2d71.29866916655672!3d13.611052002996896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srk%20driving%20school!5e0!3m2!1sen!2sin!4v1721138454803!5m2!1sen!2sin"width="400" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+         </div>
+         <div class="form">
+         <h2 style="font-size: xx-large;color:rgb(10, 64, 77);">Details</h2>
+         </h2>
+         <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" required><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="user_email" required><br>
+
+            <label for="mobile no">Mobile no:</label>
+            <input type="mobile no" id="mobile no" name="mobile_no" required><br>
+    
+            <label for="message">feedback:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+    
+            <button type="submit">Submit</button>
+        </form>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+                    <script>
+                        (function () {
+                            emailjs.init('BG3boyfq45mCSFw_t'); // Replace with your EmailJS User ID
+                        })();
+
+                         document.getElementById('contact-form').addEventListener('submit', function (event) {
+                            event.preventDefault();
+
+                            emailjs.sendForm('service_tegbtzn','template_otctjkn', this)
+                                .then(function (response) {
+                                    alert('Email sent successfully!');
+                                    document.getElementById('contact-form').reset(); // Optional: reset form fields
+                                }, function (error) {
+                                    alert('Failed to send email. Error: ' + JSON.stringify(error));
+                                });
+                        });
+                    </script>
+
+         </div>
+     </div>
+</section>
+    <br>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section useful-links">
+                <h2 style="color:whitesmoke">Useful Links</h2>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="testimonial.html">Testimonial</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section address">
+                <h2 style="color:whitesmoke;">Contact Details</h2>
+                <p style="font-size: larger;"> No.24/1 pachaiyappa street,<br>
+                    opposite to Anna arch, <br>
+                    Arumbakkam, Chennai,<br>
+                    Tamil Nadu-600106</p>
+                 <p style="font-size: larger;">Email: rk@drivingschool.com<br>
+                     Phone: 6375879918</p>
+            </div>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    <footer>
+        <div class="footer-bottom">
+            <p style="text-align: center;">&copy; 2024 RK Driving School . All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

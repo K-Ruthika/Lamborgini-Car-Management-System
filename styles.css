@@ -1,0 +1,919 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:rgb(190, 223, 249);
+}
+header {
+    background-color:#333;
+    color: rgb(10, 64, 77);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 40px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: white;
+}
+.slider{
+    position:relative;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 200%;
+    height: 100%;
+    transition: margin-left 0.5s ease-in-out;;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navigation {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prev, .next {
+    cursor: pointer;
+    color:black;
+    font-size: 50px;
+    padding: 16px;
+    border-radius: 50%;
+    transition: background 0.1s;
+}
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -100%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -200%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -300%;
+}
+.banner {
+    background-image: url('https://img.freepik.com/premium-vector/driving-school-vector-background_53562-3860.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0; /* Adjust the padding as needed */
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+}
+
+.banner-text {
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    font-weight: bold;
+}
+.zigzag {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(190, 223, 249);
+    padding: 10px;
+    background-color: rgb(190, 223, 249);
+    margin-bottom: 20px;
+}
+
+.zigzag.reverse {
+    flex-direction: row-reverse;
+}
+
+.image {
+    max-width: 100px; 
+    margin-right: 20px; 
+}
+
+.zigzag.reverse .image {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.text {
+    font-size: 16px;
+    color: rgba(245, 245, 245, 0.509);
+}
+.section {
+    padding: 1em;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 1em;
+}
+
+.home {
+    background-color:rgb(190, 223, 249);
+    padding: 1em;
+}
+
+.home h1 {
+    font-size: 2.5em;
+    color:rgb(190, 223, 249);
+}
+
+.home p {
+    font-size: 1.2em;
+    color:rgb(190, 223, 249);
+}
+.testimonials{
+    margin:1em 0;
+}
+header {
+    background-color:#333;
+    color:white;
+    padding: 20px;
+    text-align: center;
+}
+.driving-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    background-color: rgb(190, 223, 249);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay span {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.content {
+    padding: 15px;
+}
+
+.content h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.content p {
+    font-size: 14px;
+    color: #666;
+}  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes background-color {
+    0% {
+        background: linear-gradient(to bottom, #000428, #004683);
+    }
+
+    25% {
+        background: linear-gradient(135deg, #1a4223, #5ee95e);
+    }
+
+    50% {
+        background: linear-gradient(to bottom, #421a31, #e95ed2);
+    }
+
+    100% {
+        background: linear-gradient(-135deg, #fae37d, #881da8, #20668f);
+    }
+
+}
+
+.container {
+    margin-top: 80px;
+}
+
+.container .col-lg-4 {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    border: none;
+    background-color: inherit;
+}
+
+.card .face {
+    position: absolute;
+    color: black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    backface-visibility: hidden;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.card .face.front-face,
+.card .face.back-face {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .face.front-face .profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card .face.front-face .name {
+    letter-spacing: 2px;
+}
+
+.card .face.front-face .designation {
+    font-size: 0.8rem;
+    color:black;
+    letter-spacing: 0.8px;
+}
+
+.card:hover .face.front-face {
+    transform: rotateY(180deg);
+}
+
+.card .face.back-face {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.06);
+    transform: rotateY(180deg);
+    padding: 20px 30px;
+    text-align: center;
+    user-select: none;
+}
+
+.card .face.back-face .fa-quote-left {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 1.2rem;
+}
+
+.card .face.back-face .fa-quote-right {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    font-size: 1.2rem;
+}
+
+.card:hover .face.back-face {
+    transform: rotateY(360deg);
+}
+
+@media(max-width: 991.5px) {
+    .col-lg-4 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+ .contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.map, .form {
+    flex: 1;
+    margin: 0 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    max-height: 600px;
+    text-align: left;
+}
+
+form label {
+    margin-top: 0em;
+}
+
+form input, form textarea {
+    padding: 2em;
+    margin-top: 0.5em;  
+    font-size: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+form button {
+    margin-top: 1em;
+    padding: 0.75em;
+    background-color:rgb(10, 64, 77);
+    color:white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.footer {
+    background: url('https://lawsmithandco.in/static/media/Footer-Background.e0626ebb.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.9;
+    color:rgba(245, 245, 245, 0.509);
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color:rgba(245, 245, 245, 0.509);
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration:double;
+}
+footer .social-media {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer .social-media a {
+    color:whitesmoke;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+.footer-section p {
+    margin: 5px 0;
+}
+.footer-bottom {
+    background-color:rgb(165, 163, 163); /* Different background for copyright section */
+    color:black;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 18px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:rgb(190, 223, 249);
+}
+header {
+    background-color:#333;
+    color: rgb(10, 64, 77);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 40px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: white;
+}
+.slider{
+    position:relative;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 200%;
+    height: 100%;
+    transition: margin-left 0.5s ease-in-out;;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navigation {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prev, .next {
+    cursor: pointer;
+    color:black;
+    font-size: 50px;
+    padding: 16px;
+    border-radius: 50%;
+    transition: background 0.1s;
+}
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -100%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -200%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -300%;
+}
+.banner {
+    background-image: url('https://img.freepik.com/premium-vector/driving-school-vector-background_53562-3860.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0; /* Adjust the padding as needed */
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+}
+
+.banner-text {
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    font-weight: bold;
+}
+.zigzag {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(190, 223, 249);
+    padding: 10px;
+    background-color: rgb(190, 223, 249);
+    margin-bottom: 20px;
+}
+
+.zigzag.reverse {
+    flex-direction: row-reverse;
+}
+
+.image {
+    max-width: 100px; 
+    margin-right: 20px; 
+}
+
+.zigzag.reverse .image {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.text {
+    font-size: 16px;
+    color: rgba(245, 245, 245, 0.509);
+}
+.section {
+    padding: 1em;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 1em;
+}
+
+.home {
+    background-color:rgb(190, 223, 249);
+    padding: 1em;
+}
+
+.home h1 {
+    font-size: 2.5em;
+    color:rgb(190, 223, 249);
+}
+
+.home p {
+    font-size: 1.2em;
+    color:rgb(190, 223, 249);
+}
+.testimonials{
+    margin:1em 0;
+}
+header {
+    background-color:#333;
+    color:white;
+    padding: 20px;
+    text-align: center;
+}
+.driving-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    background-color: rgb(190, 223, 249);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay span {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.content {
+    padding: 15px;
+}
+
+.content h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.content p {
+    font-size: 14px;
+    color: #666;
+}  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes background-color {
+    0% {
+        background: linear-gradient(to bottom, #000428, #004683);
+    }
+
+    25% {
+        background: linear-gradient(135deg, #1a4223, #5ee95e);
+    }
+
+    50% {
+        background: linear-gradient(to bottom, #421a31, #e95ed2);
+    }
+
+    100% {
+        background: linear-gradient(-135deg, #fae37d, #881da8, #20668f);
+    }
+
+}
+
+.container {
+    margin-top: 80px;
+}
+
+.container .col-lg-4 {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    border: none;
+    background-color: inherit;
+}
+
+.card .face {
+    position: absolute;
+    color: black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    backface-visibility: hidden;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.card .face.front-face,
+.card .face.back-face {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .face.front-face .profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card .face.front-face .name {
+    letter-spacing: 2px;
+}
+
+.card .face.front-face .designation {
+    font-size: 0.8rem;
+    color:black;
+    letter-spacing: 0.8px;
+}
+
+.card:hover .face.front-face {
+    transform: rotateY(180deg);
+}
+
+.card .face.back-face {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.06);
+    transform: rotateY(180deg);
+    padding: 20px 30px;
+    text-align: center;
+    user-select: none;
+}
+
+.card .face.back-face .fa-quote-left {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 1.2rem;
+}
+
+.card .face.back-face .fa-quote-right {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    font-size: 1.2rem;
+}
+
+.card:hover .face.back-face {
+    transform: rotateY(360deg);
+}
+
+@media(max-width: 991.5px) {
+    .col-lg-4 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+ .contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.map, .form {
+    flex: 1;
+    margin: 0 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    max-height: 600px;
+    text-align: left;
+}
+
+form label {
+    margin-top: 0em;
+}
+
+form input, form textarea {
+    padding: 0em;
+    margin-top: 0.5em;  
+    font-size: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+form button {
+    margin-top: 1em;
+    padding: 0.75em;
+    background-color:rgb(10, 64, 77);
+    color:white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.footer {
+    background: url('https://lawsmithandco.in/static/media/Footer-Background.e0626ebb.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.9;
+    color:rgba(245, 245, 245, 0.509);
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color:rgba(245, 245, 245, 0.509);
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration:double;
+}
+footer .social-media {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer .social-media a {
+    color:whitesmoke;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+.footer-section p {
+    margin: 5px 0;
+}
+.footer-bottom {
+    background-color:rgb(165, 163, 163); /* Different background for copyright section */
+    color:black;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 18px;
+}
+
+
+

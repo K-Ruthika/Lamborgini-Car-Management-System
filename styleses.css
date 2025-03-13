@@ -1,0 +1,26 @@
+.banner {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/015/618/048/original/driving-school-with-education-process-of-car-training-and-learning-to-drive-to-get-drivers-license-in-flat-cartoon-hand-drawn-templates-illustration-vector.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0; /* Adjust the padding as needed */
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+}
+
+.banner-text {
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    font-weight: bold;
+}

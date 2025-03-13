@@ -1,0 +1,104 @@
+.banner {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/025/441/328/non_2x/driving-school-driver-license-tiny-people-studying-in-drive-lesson-and-passing-exams-online-use-laptop-traffic-rules-road-signs-modern-flat-cartoon-style-illustration-on-white-background-vector.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0; /* Adjust the padding as needed */
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+}
+
+.banner-text {
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    font-weight: bold;
+}
+.driving-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    background-color: rgb(190, 223, 249);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay span {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.content {
+    padding: 15px;
+}
+
+.content h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.content p {
+    font-size: 14px;
+    color: #666;
+}
+
